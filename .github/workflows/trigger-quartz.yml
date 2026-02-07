@@ -1,0 +1,17 @@
+name: Trigger Quartz Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify-quartz:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Quartz Repository Dispatch
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.QUARTZ_TOKEN }}
+          repository: Mulhamsth/posts
+          event-type: update_submodules
