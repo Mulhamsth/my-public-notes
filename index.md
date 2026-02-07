@@ -1,5 +1,6 @@
 ---
 title: Welcome to my Website
+suggest-changes: "false"
 ---
 
 This is a blank Quartz installation.
